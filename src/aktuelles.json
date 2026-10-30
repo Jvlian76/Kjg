@@ -1,0 +1,66 @@
+[
+  {
+    "id": "mitgliederversammlung-2026",
+    "date": "2026-03-19",
+    "tag": "Verein",
+    "title": "Mitgliederversammlung 2026",
+    "teaser": "Alle Mitglieder sind eingeladen: Am 18. April 2026 wählen wir im Marienhaus Steinbach das neue Leitungsteam und die Geistliche Leitung.",
+    "text": "<p>Liebe Mitglieder der KjG Rebland,</p><p>unsere diesjährige ordentliche Mitgliederversammlung findet am <strong>Samstag, 18. April 2026 um 15:30 Uhr</strong> in den Gruppenräumen des Steinbacher Marienhauses (Häfnergasse 16) statt.</p><p>Auf der Tagesordnung stehen unter anderem der Rechenschafts- und Kassenbericht sowie die Wahlen von Leitungsteam, Geistlicher Leitung und Kassenprüfung. Wir gestalten die Versammlung bewusst anschaulich, kurzweilig und kindgerecht – denn bei uns dürfen alle anwesenden Mitglieder mitwählen. Bringt auch gerne eure eigenen Ideen für unseren Jahreskalender mit!</p><p>Euer Leitungsteam</p>",
+    "links": [
+      {"label": "Einladung (PDF)", "url": "/assets/docs/mitgliederversammlung-2026-einladung.pdf"}
+    ]
+  },
+  {
+    "id": "zeltlager-2026",
+    "date": "2026-01-23",
+    "tag": "Zeltlager",
+    "title": "Anmeldung zum Zeltlager 2026",
+    "teaser": "Vom 3. bis 15. August 2026 geht es wieder für 12 Tage ins Zeltlager – für alle Kinder ab der 5. Klasse.",
+    "text": "<p>Liebe Kids, liebe Eltern!</p><p>Auch dieses Jahr veranstalten wir in den ersten beiden Wochen der Sommerferien wieder unser beliebtes Zeltlager. Los geht’s am <strong>Montag, 3. August 2026</strong>, zurück sind wir nach 12 Tagen am <strong>Samstag, 15. August</strong>.</p><p>Die Anmeldung läuft online über Campflow (Anmeldeschluss: 15. Juni). Alle Infos zu Teilnahmebeitrag und Ablauf findet ihr in der Einladung. Bei Fragen schreibt uns an <a href=\"mailto:info@kjg-rebland.de\">info@kjg-rebland.de</a>.</p><p>Wir freuen uns auf euch!<br>Eure Grulis</p>",
+    "links": [
+      {"label": "Einladung (PDF)", "url": "/assets/docs/zeltlager-2026-einladung.pdf"},
+      {"label": "Zur Anmeldung", "url": "https://on.campflow.de/kjg-rebland/kjg-zeltlager-2026", "secondary": true}
+    ]
+  },
+  {
+    "id": "kinderferienwoche-2026",
+    "date": "2026-01-10",
+    "tag": "Kinderferienwoche",
+    "title": "Anmeldung Kinderferienwoche 2026",
+    "teaser": "Vom 25. bis 29. Mai 2026 geht es für alle 3.- bis 5.-Klässler ins Ferienhaus „Hundseck“ bei Bühl.",
+    "text": "<p>Liebe Eltern, liebe Kids!</p><p>Es ist wieder so weit: Unsere Kinderferienwoche 2026 findet von <strong>Montag, 25. Mai bis Freitag, 29. Mai 2026</strong> in unserem Ferienhaus „Hundseck“ bei Bühl statt. Dort ist genug Zeit und Platz zum Spielen, Toben und Spaßhaben. Anmelden können sich alle Kinder der 3. bis 5. Klasse aus dem Rebland und Umgebung.</p><p>Die Anmeldung läuft online über Campflow (Anmeldeschluss: 20. April). Der Teilnahmebeitrag beträgt 130 €, für Geschwisterkinder gibt es 10 € Rabatt pro Kind. Fragen gerne an <a href=\"mailto:kifewo@kjg-rebland.de\">kifewo@kjg-rebland.de</a>.</p><p>Wir freuen uns auf euch!<br>Eure Grulis</p>",
+    "links": [
+      {"label": "Einladung (PDF)", "url": "/assets/docs/kinderferienwoche-2026-einladung.pdf"},
+      {"label": "Zur Anmeldung", "url": "https://on.campflow.de/kjg-rebland/kinderferienwoche-2026", "secondary": true}
+    ]
+  },
+  {
+    "id": "zeltlager-2025",
+    "date": "2025-03-25",
+    "tag": "Zeltlager",
+    "title": "Zeltlager 2025: Anmeldung offen",
+    "teaser": "Zwölf Tage auf einer Wiese im Schwarzwald – mit Spielen, Sport, Chill-Tagen und Schwimmbadausflügen.",
+    "text": "<p>Liebe KjG-Kids, liebe Kinder aus dem Rebland und Umgebung … endlich ist es wieder so weit! Am 4. August starten wir in unser Abenteuer und schlagen wie jedes Jahr unsere Zelte auf einer Wiese im Schwarzwald auf (Fahrzeit 1–2 Stunden). Verschiedenste Spiele, Sportangebote, tolle gemeinsame Essen, Chill-Tage und Schwimmbadausflüge sind nur ein Teil unseres Programms.</p><p>Für alle Eltern, die uns genauer kennenlernen möchten, gibt es wieder einen Zeltlager-Elternabend.</p>",
+    "links": []
+  },
+  {
+    "id": "regeln-ueberfaelle",
+    "date": "2023-07-13",
+    "tag": "Zeltlager",
+    "title": "Regeln für Überfälle aufs Lagerkreuz",
+    "teaser": "Überfälle auf unser Lagerkreuz sind erlaubt – aber nur nach unseren Regeln. Hier steht, worauf ihr achten müsst.",
+    "text": "<p>Liebe Freunde der KjG Rebland, auch im Zeltlager sind Überfälle auf unser Lagerkreuz gestattet. Damit alles problemlos abläuft, haben wir ein paar Regeln aufgestellt – ihr findet sie auf unserer Zeltlager-Seite.</p>",
+    "links": [
+      {"label": "Zu den Überfall-Regeln", "url": "/zeltlager/#ueberfaelle"}
+    ]
+  },
+  {
+    "id": "neue-satzung-2023",
+    "date": "2023-03-10",
+    "tag": "Verein",
+    "title": "Neue Satzung & erste Mitgliederversammlung",
+    "teaser": "Mit der bundesweiten Vereinsreform ist die Mitgliederversammlung unser höchstes Entscheidungsgremium geworden.",
+    "text": "<p>Im Zuge der bundesweiten Vereinsreform hat sich auch unsere Ortsgruppe neu aufgestellt: Das höchste Entscheidungsorgan der KjG Rebland ist seitdem die jährliche Mitgliederversammlung. Auf der Versammlung am 1. April 2023 in Steinbach stand außerdem unsere neue Satzung zur Abstimmung, die wir im Zuge der Reform ausgearbeitet haben und die vorab vom Satzungsausschuss der Diözesanleitung geprüft wurde.</p>",
+    "links": []
+  }
+]

@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{page_title}}</title>
+  <meta name="description" content="{{description}}">
+  <link rel="canonical" href="{{canonical}}">
+  <meta name="theme-color" content="#14482a">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="de_DE">
+  <meta property="og:site_name" content="KjG Rebland">
+  <meta property="og:title" content="{{page_title}}">
+  <meta property="og:description" content="{{description}}">
+  <meta property="og:url" content="{{canonical}}">
+  <meta property="og:image" content="{{site_url}}/assets/img/zeltlager-lagerkreuz-sm.jpg">
+  <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preload" href="/assets/fonts/baloo-2-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/nunito-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/style.css?v={{version}}">
+  <script src="/assets/js/main.js?v={{version}}" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#inhalt">Zum Inhalt springen</a>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="/" aria-label="KjG Rebland – Startseite">
+        <img src="/assets/img/kjg-zeichen.png" alt="" width="46" height="46">
+        <span>
+          <span class="brand-name">KjG <span>Rebland</span></span>
+          <span class="brand-sub">Steinbach · Neuweier · Eisental</span>
+        </span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="hauptnavigation">
+        <span></span><span class="sr-only">Menü öffnen</span>
+      </button>
+
+      <nav class="nav" id="hauptnavigation" aria-label="Hauptnavigation">
+        <ul class="nav-list">
+          <li><a class="nav-link" href="/"{{cur:start}}>Start</a></li>
+          <li class="has-dropdown">
+            <button class="nav-link{{active:angebote}}" type="button" aria-expanded="false" aria-controls="dd-angebote" data-dropdown>
+              Angebote {{icon:chev}}
+            </button>
+            <ul class="dropdown" id="dd-angebote">
+              <li><a href="/zeltlager/"><span class="dd-icon bg-red-l">{{icon:tent}}</span><span>Zeltlager<small>12 Tage Abenteuer im Sommer</small></span></a></li>
+              <li><a href="/kinderferienwoche/"><span class="dd-icon bg-sun-l">{{icon:house}}</span><span>Kinderferienwoche<small>Der Einstieg in die KjG</small></span></a></li>
+              <li><a href="/gruppenstunden/"><span class="dd-icon bg-leaf-l">{{icon:group}}</span><span>Gruppenstunden<small>Jede Woche mit deiner Gruppe</small></span></a></li>
+              <li><a href="/winzertage/"><span class="dd-icon bg-grape-l">{{icon:grapes}}</span><span>Winzertage<small>Bowle, Bühne &amp; Theater</small></span></a></li>
+              <li><a href="/angebote/"><span class="dd-icon">{{icon:star}}</span><span>Alle Angebote<small>Unser Jahr im Überblick</small></span></a></li>
+            </ul>
+          </li>
+          <li><a class="nav-link" href="/ueber-uns/"{{cur:ueber-uns}}>Über uns</a></li>
+          <li><a class="nav-link" href="/aktuelles/"{{cur:aktuelles}}>Aktuelles</a></li>
+          <li><a class="nav-link" href="/kontakt/"{{cur:kontakt}}>Kontakt</a></li>
+        </ul>
+        <div class="nav-cta"><a class="btn btn-red btn-small" href="/mitmachen/">Mitmachen {{icon:heart-mini}}</a></div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="inhalt">
+{{content}}
+  </main>
+
+  <footer class="site-footer">
+    {{partial:footer-scene}}
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">
+            <img src="/assets/img/kjg-zeichen.png" alt="" width="52" height="52">
+            <strong>KjG Rebland</strong>
+          </div>
+          <p>Katholische junge Gemeinde aus Steinbach, Neuweier und Eisental – Kinder- und Jugendarbeit von Jugendlichen für Kinder, ehrenamtlich und mit ganz viel Herz.</p>
+          <div class="social">
+            <a href="https://www.instagram.com/kjg_rebland/" rel="noopener" target="_blank" aria-label="KjG Rebland auf Instagram">{{icon:instagram}}</a>
+            <a href="mailto:info@kjg-rebland.de" aria-label="E-Mail an die KjG Rebland">{{icon:mail-line}}</a>
+          </div>
+        </div>
+        <div>
+          <h2>Angebote</h2>
+          <ul>
+            <li><a href="/zeltlager/">Zeltlager</a></li>
+            <li><a href="/kinderferienwoche/">Kinderferienwoche</a></li>
+            <li><a href="/gruppenstunden/">Gruppenstunden</a></li>
+            <li><a href="/winzertage/">Winzertage</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Verein</h2>
+          <ul>
+            <li><a href="/ueber-uns/">Über uns</a></li>
+            <li><a href="/aktuelles/">Aktuelles</a></li>
+            <li><a href="/mitmachen/">Mitmachen &amp; Eltern-Infos</a></li>
+            <li><a href="/kontakt/">Kontakt</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Kontakt</h2>
+          <address>
+            KjG Rebland<br>
+            Kirchplatz 2<br>
+            76534 Baden-Baden<br>
+            <a href="mailto:info@kjg-rebland.de">info@kjg-rebland.de</a>
+          </address>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© {{year}} KjG Rebland · Mitglied der <a href="https://www.kjg-freiburg.de/" rel="noopener" target="_blank">KjG Erzdiözese Freiburg</a></span>
+        <nav aria-label="Rechtliches">
+          <a href="/impressum/">Impressum</a>
+          <a href="/datenschutz/">Datenschutz</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
