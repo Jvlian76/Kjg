@@ -11,7 +11,7 @@ Kein CMS, keine Datenbank, keine Cookies – nur HTML, CSS und ein bisschen Java
 | `src/aktuelles.json`  | Neuigkeiten – erscheinen auf der Startseite und unter „Aktuelles“ |
 | `src/layout.html`     | Kopf, Navigation und Fußzeile für alle Seiten                 |
 | `src/icons/`          | Icons, im Text einbinden mit `{{icon:name}}`                  |
-| `public/`             | Fertige Website (wird von Cloudflare ausgeliefert)            |
+| `public/`             | Fertige Website (wird von Cloudflare Pages ausgeliefert)      |
 | `public/assets/`      | Bilder, Schriften, CSS, JS und PDFs                           |
 | `build.py`            | Erzeugt aus `src/` die HTML-Dateien in `public/`              |
 
@@ -30,12 +30,15 @@ python3 -m http.server 8000 -d public
 # dann http://localhost:8000 öffnen
 ```
 
-## Veröffentlichen (Cloudflare Workers)
+## Veröffentlichen
 
-Die Seite läuft als Cloudflare Worker mit statischen Assets (`cloudflare.config.ts`, `wrangler.config.ts`).
+Die Seite läuft auf Cloudflare Pages: **https://kjg-rebland.pages.dev**
 
 ```bash
 npm install          # einmalig: installiert cf und wrangler
-npx cf auth login    # einmalig: mit dem Cloudflare-Konto anmelden
+npx cf auth login    # mit dem Cloudflare-Konto anmelden
 npm run deploy       # baut die Seite und veröffentlicht sie
 ```
+
+`scripts/deploy-pages.mjs` lädt `public/` direkt in das Pages-Projekt `kjg-rebland` hoch.
+Alternativ läuft die Seite auch als Worker (`npm run deploy:worker`, Konfiguration in `cloudflare.config.ts`).

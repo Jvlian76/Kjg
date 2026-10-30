@@ -61,7 +61,6 @@ a:hover { color: var(--red); }
 :focus-visible { outline: 3px dashed var(--red); outline-offset: 3px; border-radius: 6px; }
 
 h1, h2, h3, h4 {
-  hyphens: auto;
   overflow-wrap: break-word;
   font-family: var(--font-head);
   line-height: 1.08;
@@ -71,7 +70,7 @@ h1, h2, h3, h4 {
 }
 h1 { font-size: clamp(2.4rem, 1.6rem + 4vw, 4.6rem); font-weight: 800; }
 h2 { font-size: clamp(1.9rem, 1.4rem + 2.2vw, 3rem); font-weight: 800; }
-h3 { font-size: clamp(1.3rem, 1.15rem + .7vw, 1.65rem); font-weight: 700; }
+h3 { font-size: clamp(1.3rem, 1.15rem + .7vw, 1.65rem); font-weight: 700; hyphens: auto; }
 p { margin: 0 0 1em; }
 ul, ol { padding-left: 1.2em; }
 strong { font-weight: 800; }

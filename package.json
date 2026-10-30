@@ -5,7 +5,8 @@
   "description": "Website der KjG Rebland",
   "scripts": {
     "build": "python3 build.py",
-    "deploy": "python3 build.py && cf deploy"
+    "deploy": "python3 build.py && node scripts/deploy-pages.mjs public kjg-rebland",
+    "deploy:worker": "python3 build.py && cf deploy"
   },
   "devDependencies": {
     "cf": "0.15.0",
