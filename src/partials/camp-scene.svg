@@ -1,0 +1,70 @@
+<svg viewBox="0 0 1200 330" preserveAspectRatio="xMidYMax slice" stroke="#1d2a21" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+  <defs>
+    <radialGradient id="glut">
+      <stop offset="0" stop-color="#ffc23d" stop-opacity=".85"/>
+      <stop offset=".45" stop-color="#ff8a1f" stop-opacity=".35"/>
+      <stop offset="1" stop-color="#ff8a1f" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <!-- Himmel: verschwindet beim Scrollen -->
+  <g data-layer="sky">
+    <g data-layer="sun">
+      <g class="sun-rays" stroke-width="4"><path d="M1080 18v-14M1080 122v14M1028 70h-14M1132 70h14M1043 33l-10-10M1117 107l10 10M1117 33l10-10M1043 107l-10 10"/></g>
+      <circle cx="1080" cy="70" r="34" fill="#ffc23d"/>
+    </g>
+    <g data-layer="clouds">
+      <path d="M120 78a18 18 0 0 1 30-14 22 22 0 0 1 40 6 15 15 0 0 1 2 30H128a14 14 0 0 1-8-22z" fill="#fff"/>
+      <path d="M470 58a14 14 0 0 1 24-10 18 18 0 0 1 32 6 12 12 0 0 1 1 24h-52a11 11 0 0 1-5-20z" fill="#fff"/>
+      <path d="M820 92a12 12 0 0 1 20-8 15 15 0 0 1 27 5 10 10 0 0 1 1 20h-44a9 9 0 0 1-4-17z" fill="#fff"/>
+    </g>
+    <g data-layer="birds"><path d="M300 70q8-9 16 0q8-9 16 0M350 48q6-7 12 0q6-7 12 0" fill="none" stroke-width="2.5"/></g>
+  </g>
+  <!-- Sterne: erscheinen am Abend -->
+  <g data-layer="stars" fill="#ffc23d" stroke="none" opacity="0">
+    <path d="m120 150 3 8 8 3-8 3-3 8-3-8-8-3 8-3z"/><path d="m400 128 2 6 6 2-6 2-2 6-2-6-6-2 6-2z"/><path d="m560 150 3 8 8 3-8 3-3 8-3-8-8-3 8-3z"/>
+    <path d="m820 104 2 6 6 2-6 2-2 6-2-6-6-2 6-2z"/><path d="m960 130 3 8 8 3-8 3-3 8-3-8-8-3 8-3z"/><path d="m1150 96 2 6 6 2-6 2-2 6-2-6-6-2 6-2z"/>
+  </g>
+  <!-- hinterer Hügel mit Dorf -->
+  <g data-layer="back">
+    <path data-hill="#3f5a63" d="M-10 175C140 112 300 118 430 150S700 100 870 128s230 22 340-10 200-6 300 10V340H-10z" fill="#cfe9c6"/>
+    <g fill="#fff" stroke-width="2.5">
+      <path d="M690 124v-30h18v30"/><path d="M690 94l9-26 9 26z" fill="#e2332b"/><path d="M699 68v-12M694 61h10"/>
+      <path d="M664 128v-16l10-9 10 9v16z"/><path d="M712 124v-14l10-9 10 9v14z"/><path d="M736 122v-12l8-7 8 7v12z" fill="#ffc23d"/>
+      <path d="M250 136v-13l8-7 8 7v13z"/><path d="M270 134v-15h14v15"/><path d="M270 119l7-18 7 18z" fill="#e2332b"/><path d="M277 101v-9M273 96h8"/>
+      <path d="M1290 124v-14l10-9 10 9v14z"/><path d="M1314 122v-26h16v26"/><path d="M1314 96l8-22 8 22z" fill="#e2332b"/><path d="M1322 74v-10M1318 69h8"/>
+    </g>
+  </g>
+  <!-- mittlerer Hügel mit Reben -->
+  <g data-layer="mid">
+    <path data-hill="#2f5a46" d="M-10 238C190 172 380 182 560 212s330-28 650-12 220 10 300 4V340H-10z" fill="#8fcf7e"/>
+    <g fill="none" stroke="#1f6e35" stroke-width="7" stroke-dasharray="1 15">
+      <path d="M20 236C150 196 270 190 380 204"/><path d="M40 252C170 214 300 208 420 222"/><path d="M60 266C190 232 320 228 460 240"/>
+      <path d="M780 214c120-14 240-16 380-8 100 4 200 6 300 0"/><path d="M760 230c130-14 260-14 410-6 100 4 200 6 300 0"/><path d="M780 246c130-12 250-12 390-4 100 4 200 6 300 0"/>
+    </g>
+    <g fill="#1f6e35" stroke-width="2.5">
+      <path d="M520 214l18-46 18 46z"/><path d="M524 196l14-36 14 36z"/><path d="M538 214v8"/>
+      <path d="M1120 214l16-42 16 42z"/><path d="M1124 197l12-32 12 32z"/>
+      <path d="M1160 220l14-36 14 36z"/>
+      <path d="M1260 214l16-42 16 42z"/><path d="M1264 197l12-32 12 32z"/>
+    </g>
+  </g>
+  <!-- vorne: Lagerplatz -->
+  <g data-layer="front">
+    <path data-hill="#0b2a1a" d="M-10 276C240 248 500 258 700 264s320-14 520-8V340H-10z" fill="#14482a"/>
+    <path d="M270 268l58-82 58 82z" fill="#e2332b"/><path d="M314 268l14-38 14 38z" fill="#1d2a21"/><path d="M328 186l-6-10M328 186l6-10"/>
+    <path d="M408 266l44-62 44 62z" fill="#ffc23d"/><path d="M442 266l10-28 10 28z" fill="#1d2a21"/>
+    <path d="M930 264l52-72 52 72z" fill="#fff"/><path d="M970 264l12-32 12 32z" fill="#1d2a21"/><path d="M982 192l-5-9M982 192l5-9"/>
+    <path d="M610 266V118M568 150h84"/>
+    <g stroke-width="2.5"><path d="M574 150v26l9-6 9 6v-26z" fill="#fff"/><path d="M601 150v26l9-6 9 6v-26z" fill="#fff"/><path d="M628 150v26l9-6 9 6v-26z" fill="#fff"/></g>
+    <circle cx="583" cy="160" r="3.5" fill="#e2332b" stroke="none"/><circle cx="610" cy="160" r="3.5" fill="#1f8a3a" stroke="none"/><circle cx="637" cy="160" r="3.5" fill="#ffc23d" stroke="none"/>
+    <path class="flag" d="M611 120l40 9-40 11z" fill="#e2332b"/>
+  </g>
+  <!-- Lagerfeuer (bleibt hell, auch am Abend) -->
+  <g data-layer="fire">
+    <circle data-layer="glow" cx="765" cy="240" r="110" fill="url(#glut)" stroke="none" opacity="0"/>
+    <path d="M740 270l50-12M790 270l-50-12" stroke="#8a5a2b" stroke-width="7"/>
+    <path class="flame" d="M765 262c-16 0-20-14-14-24 3 6 6 7 8 6-4-12 4-22 10-28 0 10 14 16 14 30 0 10-8 16-18 16z" fill="#ff8a1f"/>
+    <path class="flame flame-2" d="M765 262c-7 0-9-6-6-11 2 2 3 3 4 2-1-6 2-10 5-13 0 5 6 8 6 14 0 5-4 8-9 8z" fill="#ffc23d" stroke-width="2"/>
+    <circle class="spark" cx="772" cy="216" r="2.5" fill="#ffc23d" stroke="none"/><circle class="spark spark-2" cx="758" cy="222" r="2" fill="#ff8a1f" stroke="none"/><circle class="spark spark-3" cx="768" cy="226" r="2" fill="#ffc23d" stroke="none"/>
+  </g>
+</svg>
