@@ -1,0 +1,14 @@
+{
+  "name": "kjg-rebland",
+  "private": true,
+  "type": "module",
+  "description": "Website der KjG Rebland",
+  "scripts": {
+    "build": "python3 build.py",
+    "deploy": "python3 build.py && cf deploy"
+  },
+  "devDependencies": {
+    "cf": "0.15.0",
+    "wrangler": "4.136.0"
+  }
+}

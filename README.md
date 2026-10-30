@@ -11,7 +11,7 @@ Kein CMS, keine Datenbank, keine Cookies – nur HTML, CSS und ein bisschen Java
 | `src/aktuelles.json`  | Neuigkeiten – erscheinen auf der Startseite und unter „Aktuelles“ |
 | `src/layout.html`     | Kopf, Navigation und Fußzeile für alle Seiten                 |
 | `src/icons/`          | Icons, im Text einbinden mit `{{icon:name}}`                  |
-| `public/`             | Fertige Website (wird von Cloudflare Pages ausgeliefert)      |
+| `public/`             | Fertige Website (wird von Cloudflare ausgeliefert)            |
 | `public/assets/`      | Bilder, Schriften, CSS, JS und PDFs                           |
 | `build.py`            | Erzeugt aus `src/` die HTML-Dateien in `public/`              |
 
@@ -20,7 +20,7 @@ Kein CMS, keine Datenbank, keine Cookies – nur HTML, CSS und ein bisschen Java
 1. In `src/aktuelles.json` oben einen neuen Eintrag ergänzen (Vorlage: ein vorhandener Eintrag).
    `tag` ist `Zeltlager`, `Kinderferienwoche`, `Winzertage` oder `Verein`.
 2. PDFs (z. B. Einladungen) nach `public/assets/docs/` legen und in `links` verlinken.
-3. `python3 build.py` ausführen, committen, pushen – Cloudflare veröffentlicht automatisch.
+3. `npm run deploy` ausführen (baut und veröffentlicht), danach committen und pushen.
 
 ## Lokal ansehen
 
@@ -30,13 +30,12 @@ python3 -m http.server 8000 -d public
 # dann http://localhost:8000 öffnen
 ```
 
-## Hosting auf Cloudflare Pages
+## Veröffentlichen (Cloudflare Workers)
 
-Cloudflare-Dashboard → Workers & Pages → Erstellen → Pages → Mit Git verbinden → dieses Repository wählen:
+Die Seite läuft als Cloudflare Worker mit statischen Assets (`cloudflare.config.ts`, `wrangler.config.ts`).
 
-- Framework preset: **None**
-- Build command: *(leer lassen)*
-- Build output directory: **public**
-
-Danach unter „Custom domains“ `kjg-rebland.de` hinzufügen.
-Alternativ per Kommandozeile: `npx wrangler pages deploy public --project-name kjg-rebland`.
+```bash
+npm install          # einmalig: installiert cf und wrangler
+npx cf auth login    # einmalig: mit dem Cloudflare-Konto anmelden
+npm run deploy       # baut die Seite und veröffentlicht sie
+```

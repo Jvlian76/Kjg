@@ -6,7 +6,7 @@ Quellen:   src/layout.html      – Grundgerüst (Header, Navigation, Footer)
            src/aktuelles.json   – Neuigkeiten (Startseite + Seite "Aktuelles")
            src/icons/*.svg      – Icons, einbinden mit {{icon:name}}
            src/partials/*.svg   – größere Grafiken, einbinden mit {{partial:name}}
-Ausgabe:   public/              – fertige Seite, die Cloudflare Pages ausliefert
+Ausgabe:   public/              – fertige Seite, die Cloudflare ausliefert
 
 Aufruf:    python3 build.py     (nur Python-Standardbibliothek nötig)
 """
