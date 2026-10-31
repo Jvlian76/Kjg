@@ -109,7 +109,6 @@ def main():
                   .replace("{{description}}", html.escape(meta["description"]))
                   .replace("{{canonical}}", SITE_URL + (path or "/404"))
                   .replace("{{site_url}}", SITE_URL)
-                  .replace("{{body_class}}", meta.get("body_class", ""))
                   .replace("{{version}}", version)
                   .replace("{{year}}", str(datetime.date.today().year)))
         leftover = re.findall(r"\{\{[^}]+\}\}", doc)
