@@ -89,15 +89,6 @@ strong { font-weight: 800; }
 }
 .skip-link:focus { top: 12px; color: #fff; }
 
-/* Kleiner Marker über Überschriften */
-.kicker {
-  display: inline-flex; align-items: center; gap: .45em;
-  font-family: var(--font-head); font-weight: 700; font-size: 1rem;
-  text-transform: uppercase; letter-spacing: .08em;
-  color: var(--red); margin-bottom: .6rem;
-}
-.kicker::before { content: ""; width: 12px; height: 12px; border-radius: 50%; background: var(--red); box-shadow: 0 0 0 3px var(--red-light); }
-
 /* Textmarker-Effekt */
 .mark {
   background: linear-gradient(transparent 58%, var(--sun) 58%, var(--sun) 92%, transparent 92%);
@@ -217,8 +208,6 @@ strong { font-weight: 800; }
 .bg-paper2 { background: var(--paper-2); }
 .bg-green { background: var(--forest); color: #fff; }
 .bg-green .lead, .bg-green .muted { color: #cfe7d4; }
-.bg-green .kicker { color: var(--sun); }
-.bg-green .kicker::before { background: var(--sun); box-shadow: 0 0 0 3px rgba(255, 194, 61, .3); }
 .bg-green a:not(.btn) { color: var(--sun); }
 .bg-sun { background: var(--sun); }
 
