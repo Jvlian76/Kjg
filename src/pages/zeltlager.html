@@ -74,12 +74,16 @@
   </div>
 </section>
 
+<div class="raid-band">
+  {{partial:raid-scene}}
+</div>
 <section class="section bg-paper2" id="ueberfaelle">
   <div class="wrap narrow">
     <div class="section-head">
       <p class="kicker">Für Ehemalige &amp; Freunde</p>
       <h2>Regeln für Überfälle aufs Lagerkreuz</h2>
       <p class="lead">Überfälle auf unser Lagerkreuz sind eine schöne Tradition und erlaubt – solange sich alle an diese Regeln halten:</p>
+      <button class="btn btn-small btn-white" type="button" data-raid hidden>Überfall auslösen! {{icon:fire-mini}}</button>
     </div>
     <div class="faq">
       <details open>
@@ -128,3 +132,13 @@
     </div>
   </div>
 </section>
+
+<div class="raid-run" aria-hidden="true">
+  <svg class="raid-track" viewBox="0 0 330 70" overflow="visible">
+    <polygon points="40,26 168,4 168,56" fill="url(#raid-beam)"/>
+    <use href="#gruli" x="0" y="4" width="44" height="64" style="--step:.22s"/>
+    <use href="#raider" x="172" y="4" width="44" height="64" style="--step:.2s"/>
+    <use href="#raider" x="222" y="2" width="44" height="64" style="--step:.24s"/>
+    <use href="#raider-flag" x="274" y="4" width="44" height="64" style="--step:.21s"/>
+  </svg>
+</div>

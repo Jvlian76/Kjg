@@ -46,3 +46,36 @@
     }
   });
 })();
+
+// Zeltlager: Überfäller-Szene nur abspielen, wenn sie sichtbar ist,
+// und einmal pro Besuch (oder per Knopf) Überfäller quer über den Bildschirm rennen lassen.
+(function () {
+  var band = document.querySelector(".raid-band");
+  var run = document.querySelector(".raid-run");
+  if (!band || !run || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+  if ("IntersectionObserver" in window) {
+    new IntersectionObserver(function (entries) {
+      band.classList.toggle("is-visible", entries[0].isIntersecting);
+    }).observe(band);
+  } else {
+    band.classList.add("is-visible");
+  }
+
+  function raid() {
+    run.classList.remove("is-running");
+    void run.offsetWidth; // Animation neu starten
+    run.classList.add("is-running");
+  }
+  run.addEventListener("animationend", function () { run.classList.remove("is-running"); });
+
+  var button = document.querySelector("[data-raid]");
+  if (button) {
+    button.hidden = false;
+    button.addEventListener("click", raid);
+  }
+
+  var seen = false;
+  try { seen = sessionStorage.getItem("kjg-ueberfall") === "1"; sessionStorage.setItem("kjg-ueberfall", "1"); } catch (e) {}
+  if (!seen) setTimeout(raid, 1500);
+})();
