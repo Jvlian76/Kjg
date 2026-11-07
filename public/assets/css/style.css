@@ -278,6 +278,17 @@ strong { font-weight: 800; }
 .spark-3 { animation-delay: -2s; }
 .flag { transform-origin: 0 50%; transform-box: fill-box; animation: wave-flag 2.4s ease-in-out infinite alternate; }
 .sun-rays { transform-origin: center; transform-box: fill-box; animation: spin 40s linear infinite; }
+.cloud { animation: drift 28s ease-in-out infinite alternate; }
+.cloud-2 { animation-duration: 36s; animation-delay: -12s; }
+.cloud-3 { animation-duration: 22s; animation-delay: -6s; }
+.birds { animation: birds 6s ease-in-out infinite alternate; }
+.laundry { transform-origin: 50% 0; transform-box: fill-box; animation: sway 2.8s ease-in-out infinite alternate; }
+.strum { transform-origin: 20px 32px; animation: strum .5s ease-in-out infinite alternate; }
+.note { animation: rise 3.4s linear infinite; transform-box: fill-box; }
+@keyframes drift { from { transform: translateX(-24px); } to { transform: translateX(24px); } }
+@keyframes birds { from { transform: translate(0, 0); } to { transform: translate(30px, -8px); } }
+@keyframes sway { from { transform: rotate(-3deg); } to { transform: rotate(3deg); } }
+@keyframes strum { to { transform: rotate(14deg); } }
 @keyframes flicker { 0% { transform: scale(1, 1) rotate(-2deg); } 50% { transform: scale(.92, 1.08) rotate(2deg); } 100% { transform: scale(1.04, .94) rotate(-1deg); } }
 @keyframes rise { 0% { transform: translateY(0); opacity: 0; } 15% { opacity: 1; } 100% { transform: translateY(-60px); opacity: 0; } }
 @keyframes wave-flag { from { transform: skewY(-4deg) scaleX(1); } to { transform: skewY(4deg) scaleX(.92); } }
@@ -628,12 +639,32 @@ address { font-style: normal; }
 .art-blob-center { width: 220px; margin: 0 auto 30px; }
 
 /* ---------- Zeltlager: Überfäller ---------- */
-.raid-band { height: clamp(140px, 15vw, 210px); background: #10233a; --play: paused; }
+/* Höhe wächst mit der Breite (viewBox 1600×300), damit oben nichts abgeschnitten wird;
+   auf schmalen Bildschirmen wird seitlich beschnitten, die Handlung liegt in der Mitte. */
+.raid-band { height: clamp(200px, 18.75vw, 420px); background: #0a172a; --play: paused; overflow: hidden; }
 .raid-band.is-visible { --play: running; }
-.raid-scene { width: 100%; height: 100%; }
-.raid-scene .twinkle { animation: twinkle 3s ease-in-out infinite alternate; animation-play-state: var(--play); }
-.raid-scene .flag, .raid-scene .flame { animation-play-state: var(--play); }
+.raid-scene { display: block; width: 100%; height: 100%; }
+.raid-scene .twinkle { animation: twinkle 3s ease-in-out infinite alternate; }
+.raid-scene .tw-2 { animation-duration: 4.2s; animation-delay: -1.5s; }
+.raid-scene .tw-3 { animation-duration: 2.4s; animation-delay: -.7s; }
+.raid-scene .shooting-star { opacity: 0; animation: shoot 11s ease-in infinite; }
+.raid-scene .mist { animation: drift 26s ease-in-out infinite alternate; }
+.raid-scene .lamp, .raid-scene .window { animation: lamp 2.6s ease-in-out infinite alternate; }
+.raid-scene .glow { transform-box: fill-box; transform-origin: center; animation: glow 1.8s ease-in-out infinite alternate; }
+.raid-scene .bulb { animation: bulb 2.2s ease-in-out infinite alternate; }
+.raid-scene .b-1 { animation-delay: -.7s; }
+.raid-scene .b-2 { animation-delay: -1.4s; }
+.raid-scene .firefly { animation: firefly 5s ease-in-out infinite; }
+.raid-scene .ff-1 { animation-duration: 6.5s; animation-delay: -2s; }
+.raid-scene .ff-2 { animation-duration: 4.4s; animation-delay: -3.1s; }
+.raid-scene .ff-3 { animation-duration: 7s; animation-delay: -1s; }
+.raid-scene *, .raid-scene .flag, .raid-scene .flame, .raid-scene .spark, .raid-scene .note { animation-play-state: var(--play); }
 @keyframes twinkle { to { opacity: .45; } }
+@keyframes shoot { 0%, 80% { opacity: 0; stroke-dashoffset: 40; } 82% { opacity: 1; } 92%, 100% { opacity: 0; stroke-dashoffset: -160; } }
+@keyframes lamp { from { opacity: 1; } to { opacity: .72; } }
+@keyframes glow { from { transform: scale(1); opacity: 1; } to { transform: scale(1.08); opacity: .82; } }
+@keyframes bulb { from { opacity: 1; } to { opacity: .55; } }
+@keyframes firefly { 0%, 100% { transform: translate(0, 0); opacity: .2; } 30% { opacity: 1; } 50% { transform: translate(14px, -10px); opacity: .9; } 75% { transform: translate(-6px, -18px); opacity: .3; } }
 
 /* Laufanimation der Figuren (wirkt auch in den <use>-Kopien über CSS-Variablen) */
 .leg, .arm { transform-origin: 22px 40px; }
@@ -650,10 +681,10 @@ address { font-style: normal; }
 .raid-beam { opacity: 0; animation: beam 12s linear infinite; animation-play-state: var(--play); }
 .raid-alarm { opacity: 0; animation: alarm 12s linear infinite; animation-play-state: var(--play); }
 @keyframes sneak {
-  0% { transform: translateX(-260px); }
-  40%, 45% { transform: translateX(420px); }
-  46% { transform: translateX(420px) scaleX(-1); }
-  70%, 100% { transform: translateX(-320px) scaleX(-1); }
+  0% { transform: translateX(-240px); }
+  40%, 45% { transform: translateX(500px); }
+  46% { transform: translateX(500px) scaleX(-1); }
+  70%, 100% { transform: translateX(-280px) scaleX(-1); }
 }
 @keyframes beam { 0%, 40% { opacity: 0; } 42%, 64% { opacity: 1; } 70%, 100% { opacity: 0; } }
 @keyframes alarm { 0%, 41% { opacity: 0; } 43%, 58% { opacity: 1; } 62%, 100% { opacity: 0; } }
@@ -667,7 +698,7 @@ address { font-style: normal; }
 [data-raid] { margin-top: 4px; }
 
 @media (prefers-reduced-motion: reduce) {
-  .raiders { transform: translateX(420px); }
+  .raiders { transform: translateX(500px); }
   .raid-beam, .raid-alarm { opacity: 1; }
 }
 @media (max-width: 600px) { .raid-run { height: 58px; } }

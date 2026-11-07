@@ -1,20 +1,34 @@
-<svg class="raid-scene" viewBox="0 0 1200 220" preserveAspectRatio="xMidYMax slice" role="img" aria-label="Gezeichnete Nachtszene im Zeltlager: Überfäller schleichen zum Lagerkreuz, ein Gruli auf Nachtwache leuchtet sie mit der Taschenlampe an und sie rennen davon" stroke="#0b1622" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+<svg class="raid-scene" viewBox="0 0 1600 300" preserveAspectRatio="xMidYMax slice" role="img" aria-label="Gezeichnete Nachtszene im Zeltlager: Zwischen Zelten, Lichterkette und Lagerfeuer sitzen Grulis mit Gitarre. Überfäller schleichen zum Lagerkreuz, der Gruli auf Nachtwache leuchtet sie mit der Taschenlampe an und sie rennen davon" stroke="#0b1622" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
   <defs>
     <linearGradient id="raid-sky" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#10233a"/>
-      <stop offset="1" stop-color="#24476a"/>
+      <stop offset="0" stop-color="#0a172a"/>
+      <stop offset=".55" stop-color="#173458"/>
+      <stop offset="1" stop-color="#2c5479"/>
     </linearGradient>
     <radialGradient id="raid-glow">
-      <stop offset="0" stop-color="#ffc23d" stop-opacity=".7"/>
-      <stop offset=".5" stop-color="#ff8a1f" stop-opacity=".25"/>
+      <stop offset="0" stop-color="#ffc23d" stop-opacity=".75"/>
+      <stop offset=".45" stop-color="#ff8a1f" stop-opacity=".28"/>
       <stop offset="1" stop-color="#ff8a1f" stop-opacity="0"/>
     </radialGradient>
+    <radialGradient id="raid-moonglow">
+      <stop offset="0" stop-color="#fff4b8" stop-opacity=".35"/>
+      <stop offset="1" stop-color="#fff4b8" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="raid-bulb">
+      <stop offset="0" stop-color="#fff4b8" stop-opacity=".9"/>
+      <stop offset="1" stop-color="#ffc23d" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="raid-mist" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#cfe2f5" stop-opacity="0"/>
+      <stop offset=".5" stop-color="#cfe2f5" stop-opacity=".16"/>
+      <stop offset="1" stop-color="#cfe2f5" stop-opacity="0"/>
+    </linearGradient>
     <linearGradient id="raid-beam" x1="1" y1="0" x2="0" y2="0">
       <stop offset="0" stop-color="#fff4b8" stop-opacity=".95"/>
       <stop offset="1" stop-color="#fff4b8" stop-opacity="0"/>
     </linearGradient>
 
-    <!-- Überfäller: dunkler Hoodie, Augenmaske, läuft nach rechts -->
+    <!-- Überfäller: grauer Hoodie, Augenmaske, läuft nach rechts -->
     <symbol id="raider" viewBox="0 0 44 64" overflow="visible">
       <g class="runner-body">
         <path class="leg leg-b" d="M20 40 16 58" stroke="#0b1622" stroke-width="6"/>
@@ -37,6 +51,12 @@
       <circle cx="30" cy="6" r="2.6" fill="#e2332b" stroke="none"/>
     </symbol>
 
+    <!-- Überfäller mit Sack -->
+    <symbol id="raider-sack" viewBox="0 0 44 64" overflow="visible">
+      <path d="M2 14q-6 10 2 16 8 4 12-4 2-8-6-14z" fill="#b08a55" stroke="#0b1622" stroke-width="2.5"/>
+      <use href="#raider" width="44" height="64"/>
+    </symbol>
+
     <!-- Gruli mit Taschenlampe: schwarzer KjG-Hoodie mit den drei Wappen
          (Steinbach, Neuweier, Eisental) und weißen Kordeln -->
     <symbol id="gruli" viewBox="0 0 44 64" overflow="visible">
@@ -52,58 +72,191 @@
         </g>
         <path class="leg leg-a" d="M23 40 28 58" stroke="#0b1622" stroke-width="6"/>
         <circle cx="22" cy="11" r="8.5" fill="#f2c8a0" stroke="#0b1622" stroke-width="2.5"/>
-        <path d="M13.5 10q1-9 9-9t8 8q-6-3-17 1z" fill="#7a4a24" stroke="#0b1622" stroke-width="2"/>
+        <path d="M13.5 10q1-9 9-9t8 8q-6-3-17 1z" fill="var(--hair, #7a4a24)" stroke="#0b1622" stroke-width="2"/>
         <circle cx="25" cy="12" r="1.5" fill="#0b1622" stroke="none"/>
         <path d="M22.5 14.5q2 1.5 4 0" stroke="#0b1622" stroke-width="1.4" fill="none"/>
         <path d="M23 25 35 27" stroke="#16191d" stroke-width="5"/>
         <rect x="33" y="23.5" width="9" height="6" rx="1.5" fill="#ffc23d" stroke="#0b1622" stroke-width="2"/>
       </g>
     </symbol>
+
+    <!-- sitzender Gruli am Feuer (schaut nach rechts) mit Stockbrot -->
+    <symbol id="gruli-sit" viewBox="0 0 44 64" overflow="visible">
+        <path d="M20 44h13l1 14" fill="none" stroke="#0b1622" stroke-width="6"/>
+        <ellipse cx="14.5" cy="22" rx="6" ry="4.5" fill="#16191d" stroke="#0b1622" stroke-width="2"/>
+        <path d="M12 44V30q0-9 9-9t9 9v14z" fill="#16191d" stroke="#0b1622" stroke-width="2.5"/>
+        <path d="M22 22.5v6M25 22.5v5" stroke="#f2f2f2" stroke-width="1.2"/>
+        <g fill="#f7f7f7" stroke="none">
+          <path d="M25 30h3.6v2.2q0 1.5-1.8 2.2-1.8-.7-1.8-2.2z"/>
+          <path d="M25 35h3.6v2.2q0 1.5-1.8 2.2-1.8-.7-1.8-2.2z"/>
+        </g>
+        <circle cx="21" cy="13" r="8.5" fill="#f2c8a0" stroke="#0b1622" stroke-width="2.5"/>
+        <path d="M12.5 12q1-10 9.5-9.5t8.5 8.5q-7-3-18 1z" fill="var(--hair, #7a4a24)" stroke="#0b1622" stroke-width="2"/>
+        <circle cx="25" cy="14" r="1.5" fill="#0b1622" stroke="none"/>
+        <path d="M23.5 17.5q2 1.5 4 0" stroke="#0b1622" stroke-width="1.4" fill="none"/>
+        <path d="M22 31l11 7" stroke="#16191d" stroke-width="5"/>
+        <path d="M31 38 62 24" stroke="#8a5a2b" stroke-width="2.5"/>
+        <path d="M54 25.5l7-3.5" stroke="#e8c48a" stroke-width="6"/>
+    </symbol>
+
+    <!-- sitzender Gruli, Hände auf den Knien -->
+    <symbol id="gruli-rest" viewBox="0 0 44 64" overflow="visible">
+        <path d="M20 44h13l1 14" fill="none" stroke="#0b1622" stroke-width="6"/>
+        <ellipse cx="14.5" cy="22" rx="6" ry="4.5" fill="#16191d" stroke="#0b1622" stroke-width="2"/>
+        <path d="M12 44V30q0-9 9-9t9 9v14z" fill="#16191d" stroke="#0b1622" stroke-width="2.5"/>
+        <path d="M22 22.5v6M25 22.5v5" stroke="#f2f2f2" stroke-width="1.2"/>
+        <g fill="#f7f7f7" stroke="none">
+          <path d="M25 30h3.6v2.2q0 1.5-1.8 2.2-1.8-.7-1.8-2.2z"/>
+          <path d="M25 35h3.6v2.2q0 1.5-1.8 2.2-1.8-.7-1.8-2.2z"/>
+        </g>
+        <circle cx="21" cy="13" r="8.5" fill="#f2c8a0" stroke="#0b1622" stroke-width="2.5"/>
+        <path d="M12.5 12q1-10 9.5-9.5t8.5 8.5q-7-3-18 1z" fill="var(--hair, #7a4a24)" stroke="#0b1622" stroke-width="2"/>
+        <circle cx="25" cy="14" r="1.5" fill="#0b1622" stroke="none"/>
+        <path d="M23.5 17.5q2 1.5 4 0" stroke="#0b1622" stroke-width="1.4" fill="none"/>
+        <path d="M22 31l10 11" stroke="#16191d" stroke-width="5"/>
+    </symbol>
+
+    <!-- sitzender Gruli mit Gitarre -->
+    <symbol id="gruli-guitar" viewBox="0 0 44 64" overflow="visible">
+        <path d="M20 44h13l1 14" fill="none" stroke="#0b1622" stroke-width="6"/>
+        <ellipse cx="14.5" cy="22" rx="6" ry="4.5" fill="#16191d" stroke="#0b1622" stroke-width="2"/>
+        <path d="M12 44V30q0-9 9-9t9 9v14z" fill="#16191d" stroke="#0b1622" stroke-width="2.5"/>
+        <path d="M22 22.5v6M25 22.5v5" stroke="#f2f2f2" stroke-width="1.2"/>
+        <g fill="#f7f7f7" stroke="none">
+          <path d="M25 30h3.6v2.2q0 1.5-1.8 2.2-1.8-.7-1.8-2.2z"/>
+          <path d="M25 35h3.6v2.2q0 1.5-1.8 2.2-1.8-.7-1.8-2.2z"/>
+        </g>
+        <circle cx="21" cy="13" r="8.5" fill="#f2c8a0" stroke="#0b1622" stroke-width="2.5"/>
+        <path d="M12.5 12q1-10 9.5-9.5t8.5 8.5q-7-3-18 1z" fill="var(--hair, #7a4a24)" stroke="#0b1622" stroke-width="2"/>
+        <circle cx="25" cy="14" r="1.5" fill="#0b1622" stroke="none"/>
+        <path d="M23.5 17.5q2 1.5 4 0" stroke="#0b1622" stroke-width="1.4" fill="none"/>
+        <path d="M29 35 47 22" stroke="#6b4423" stroke-width="3"/>
+        <path d="M16 38a7 6 0 1 0 11 7 6 5 0 1 0 4-9 5 4 0 0 0-15 2z" fill="#d98b3a" stroke="#0b1622" stroke-width="2"/>
+        <circle cx="24" cy="40" r="2" fill="#0b1622" stroke="none"/>
+        <path class="strum" d="M20 32l6 7" stroke="#16191d" stroke-width="5"/>
+    </symbol>
   </defs>
-
-  <!-- Himmel, Sterne, Mond -->
-  <rect x="-400" y="-20" width="2000" height="260" fill="url(#raid-sky)" stroke="none"/>
-  <g class="twinkle" fill="#fff4b8" stroke="none">
-    <circle cx="80" cy="30" r="2"/><circle cx="210" cy="64" r="1.5"/><circle cx="340" cy="22" r="2.2"/><circle cx="470" cy="56" r="1.4"/>
-    <circle cx="560" cy="18" r="1.8"/><circle cx="700" cy="44" r="2"/><circle cx="830" cy="20" r="1.5"/><circle cx="930" cy="70" r="1.8"/>
-    <circle cx="1150" cy="96" r="1.6"/><circle cx="20" cy="88" r="1.4"/><circle cx="640" cy="84" r="1.3"/><circle cx="1180" cy="28" r="2"/>
-  </g>
-  <path d="M1068 26a28 28 0 1 0 24 44 23 23 0 0 1-24-44z" fill="#fff4b8" stroke="none"/>
-
-  <!-- Waldrand -->
-  <path d="M-200 168V140l20-40 20 40 18-34 18 34 22-48 22 48 16-30 16 30 24-44 24 44 18-36 18 36 20-40 20 40 22-46 22 46 16-32 16 32 24-42 24 42 18-34 18 34 22-48 22 48 20-40 20 40 18-30 18 30 24-46 24 46 18-36 18 36 22-42 22 42 16-30 16 30 24-48 24 48 20-36 20 36 22-44 22 44 18-34 18 34 24-40 24 40 20-46 20 46 18-32 18 32 22-42 22 42 20-38 20 38 24-44 24 44 18-30 18 30 22-46 22 46V168z" fill="#0f2236" stroke="none"/>
-
-  <!-- Boden -->
-  <path d="M-200 176c300-14 600-12 900-6s500 6 700 2V240H-200z" fill="#0e3a24"/>
-
-  <!-- Zelte -->
-  <path d="M110 176l46-66 46 66z" fill="#9b2f2a"/><path d="M146 176l10-30 10 30z" fill="#0b1622"/>
-  <path d="M240 176l36-50 36 50z" fill="#a8842e"/><path d="M268 176l8-22 8 22z" fill="#0b1622"/>
-  <path d="M1000 174l44-62 44 62z" fill="#9aa6b4"/><path d="M1034 174l10-28 10 28z" fill="#0b1622"/>
-
+  <!-- Himmel, Mond, Sterne, Sternschnuppe -->
+  <rect x="-400" y="-200" width="2400" height="520" fill="url(#raid-sky)" stroke="none"/>
+  <circle cx="1330" cy="78" r="90" fill="url(#raid-moonglow)" stroke="none"/>
+  <path d="M1322 46a34 34 0 1 0 30 54 28 28 0 0 1-30-54z" fill="#fff4b8" stroke="none"/>
+  <g fill="#e8dc9c" stroke="none" opacity=".55"><circle cx="1316" cy="72" r="4"/><circle cx="1328" cy="96" r="3"/></g>
+  <g class="twinkle tw-1" fill="#fff4b8" stroke="none"><circle cx="723.8" cy="68.7" r="1.6"/><circle cx="982.3" cy="-17.2" r="1.6"/><circle cx="1543.6" cy="90.4" r="2"/><circle cx="959.4" cy="119" r="1.4"/><circle cx="1059.9" cy="45.2" r="1.4"/><circle cx="820.6" cy="-53.2" r="2"/><circle cx="0.9" cy="-11.8" r="1"/><circle cx="1245.6" cy="2" r="1"/><circle cx="1131.2" cy="-57.5" r="1.6"/><circle cx="1231.2" cy="36.4" r="1.6"/><circle cx="486.6" cy="143.5" r="1.2"/><circle cx="341.2" cy="-0.6" r="2"/><circle cx="388.8" cy="78.3" r="1.4"/><circle cx="292.5" cy="-24.5" r="1.2"/><circle cx="314.5" cy="158.5" r="1.6"/><circle cx="381.5" cy="102.1" r="1.4"/><circle cx="1563.5" cy="-30.9" r="1.6"/><circle cx="1198.4" cy="-44.1" r="1.6"/><circle cx="147.5" cy="-28.2" r="1.6"/><circle cx="56.1" cy="-55.9" r="1.4"/><circle cx="1168.8" cy="13.3" r="1"/><circle cx="1125.9" cy="122.5" r="1.4"/><circle cx="1023" cy="168.5" r="1.6"/><circle cx="1341.4" cy="-40.7" r="2"/><circle cx="795.6" cy="81.3" r="1.6"/><circle cx="271.4" cy="148.3" r="2.4"/><circle cx="1014.7" cy="124.9" r="1.2"/><circle cx="794.3" cy="132.5" r="1"/><circle cx="440.3" cy="-10.8" r="1.6"/><circle cx="724" cy="-42.8" r="1"/><circle cx="1038.9" cy="69.7" r="2.4"/></g>
+  <g class="twinkle tw-2" fill="#fff4b8" stroke="none"><circle cx="722.9" cy="136.7" r="1.2"/><circle cx="485.4" cy="-39.1" r="2.4"/><circle cx="1040.1" cy="83.3" r="2"/><circle cx="704.8" cy="133.8" r="2"/><circle cx="650.8" cy="66.8" r="1"/><circle cx="1226.1" cy="32.1" r="1.4"/><circle cx="752" cy="165.5" r="1.6"/><circle cx="497.9" cy="-56.5" r="1.6"/><circle cx="1275.2" cy="-19.1" r="2"/><circle cx="186.4" cy="36.8" r="1.2"/><circle cx="299.7" cy="169" r="2"/><circle cx="526.3" cy="8.2" r="1"/><circle cx="995.4" cy="-30.7" r="2"/><circle cx="1308.5" cy="-2.6" r="1.2"/><circle cx="965.7" cy="36.9" r="1"/><circle cx="673.3" cy="148.1" r="1.6"/><circle cx="895" cy="136.1" r="2"/><circle cx="713.1" cy="-46.1" r="1.2"/><circle cx="1568.8" cy="91.1" r="2.4"/><circle cx="1121.6" cy="161.4" r="1"/><circle cx="120.4" cy="65.6" r="2.4"/><circle cx="562.9" cy="97.6" r="1"/><circle cx="999.9" cy="27.9" r="2"/><circle cx="1165.1" cy="29.3" r="2.4"/><circle cx="47.7" cy="78.3" r="1.6"/><circle cx="409.3" cy="-57.4" r="1.4"/><circle cx="1488.5" cy="54.6" r="1.2"/><circle cx="1408.4" cy="28.4" r="2"/><circle cx="1137.9" cy="158.5" r="1.4"/><circle cx="612.1" cy="59.6" r="2.4"/><circle cx="445" cy="79.7" r="2.4"/><circle cx="217.4" cy="44.6" r="1"/></g>
+  <g class="twinkle tw-3" fill="#fff4b8" stroke="none"><circle cx="295.5" cy="57.7" r="2.4"/><circle cx="1015.1" cy="77" r="1.6"/><circle cx="101.1" cy="-51.8" r="1.2"/><circle cx="373.8" cy="7.7" r="1"/><circle cx="1132.5" cy="12.5" r="1.2"/><circle cx="618.4" cy="160.3" r="2.4"/><circle cx="671.7" cy="70.2" r="1.2"/><circle cx="1212.9" cy="-32.9" r="1.2"/><circle cx="301.4" cy="57" r="2.4"/><circle cx="0.8" cy="138.8" r="2"/><circle cx="1026.9" cy="-36.9" r="1.2"/><circle cx="118.8" cy="-12" r="2.4"/><circle cx="774" cy="72.2" r="1.6"/><circle cx="253.6" cy="84.7" r="2"/><circle cx="174.5" cy="57.8" r="1.4"/><circle cx="469.5" cy="-19.7" r="2.4"/><circle cx="118.6" cy="-11.1" r="1.2"/><circle cx="451.1" cy="62.1" r="1.2"/><circle cx="835.1" cy="157.8" r="2"/><circle cx="957.4" cy="-42.8" r="1"/><circle cx="71.1" cy="155.3" r="2.4"/><circle cx="1393.8" cy="35.9" r="1"/><circle cx="19.9" cy="-43.4" r="1"/><circle cx="1110.7" cy="45.3" r="1.6"/><circle cx="35.7" cy="160.2" r="1"/><circle cx="229.2" cy="80.7" r="2"/><circle cx="523.1" cy="93.2" r="1.2"/><circle cx="1473.3" cy="-11.7" r="1.2"/><circle cx="1315" cy="-34" r="1.6"/><circle cx="504.6" cy="133" r="2"/><circle cx="1133.8" cy="71.2" r="1.4"/></g>
+  <g class="twinkle tw-2" stroke="#fff4b8" stroke-width="1.6"><path d="M240 40v12M234 46h12M980 26v12M974 32h12M560 110v10M555 115h10"/></g>
+  <path class="shooting-star" d="M700 20 820 60" stroke="#fff4b8" stroke-width="2.5" stroke-dasharray="40 200"/>
+  <!-- ferner Höhenzug mit der Yburg -->
+  <g fill="#1a3150" stroke="none"><path d="M404 135.5V99.5h4v-4h4v4h4v-4h4v4h4V135.5z"/><path d="M424 135.5V113.5h3v-3h3v3h3v-3h3v3h2V135.5z"/></g>
+  <rect class="window" x="413" y="109.5" width="3" height="5" fill="#ffc23d" stroke="none"/>
+<path d="M-100 200C-83.3 197.7 -33.3 191.3 0 186C33.3 180.7 66.7 174 100 168C133.3 162 166.7 155.7 200 150C233.3 144.3 266.7 137.7 300 134C333.3 130.3 366.7 126.7 400 128C433.3 129.3 466.7 136.7 500 142C533.3 147.3 566.7 155.3 600 160C633.3 164.7 666.7 170.3 700 170C733.3 169.7 766.7 162 800 158C833.3 154 866.7 147 900 146C933.3 145 966.7 148.7 1000 152C1033.3 155.3 1066.7 165.3 1100 166C1133.3 166.7 1166.7 160.3 1200 156C1233.3 151.7 1266.7 141.3 1300 140C1333.3 138.7 1366.7 144 1400 148C1433.3 152 1466.7 160 1500 164C1533.3 168 1566.7 171.3 1600 172C1633.3 172.7 1666.7 167.3 1700 168C1733.3 168.7 1783.3 174.7 1800 176V300H-100Z" fill="#1a3150" stroke="none"/>
+  <path d="M-77.6 216.6L-60 171.9L-42.4 216.6zM-61.4 215.7L-40 161.4L-18.7 215.7zM-28.7 214.7L-18.8 187.8L-9 214.7zM-16 213.9L2.6 168.5L21.3 213.9zM1.9 213.5L15.7 173.5L29.6 213.5zM19.3 213L33.2 169.8L47.1 213zM33.2 212.7L47.3 178.3L61.5 212.7zM54.7 212.3L67 181.5L79.3 212.3zM65.6 212.1L80.4 167.6L95.2 212.1zM74.6 212L92.4 159.9L110.2 212zM84 212L106.6 156.5L129.2 212zM100.9 212.2L121.5 157.3L142 212.2zM126.9 212.5L140.2 180.4L153.5 212.5zM136.6 213L159.1 158L181.7 213zM161.7 213.4L174.1 176.5L186.5 213.4zM177.8 213.7L187.6 185.8L197.4 213.7zM195.5 214.1L205.6 188L215.7 214.1zM206.8 214.5L221 179.2L235.2 214.5zM224.7 214.9L237.8 179.5L250.9 214.9zM245.3 215.4L256.9 187.7L268.4 215.4zM249.5 215.7L269.1 167.2L288.7 215.7zM263.6 215.9L281.3 166.2L299 215.9zM290.5 216L299 189.7L307.6 216zM294.3 215.9L312.9 161.3L331.4 215.9zM310.1 215.6L332.4 161.8L354.7 215.6zM334.2 215.3L347.9 178.7L361.5 215.3zM356.1 214.8L367.6 185.5L379.2 214.8zM370.8 214.3L387.6 162.5L404.3 214.3zM398.9 213.8L409 185.1L419.2 213.8zM408.2 213.5L427.1 159.9L446.1 213.5zM433.5 213L448.4 170.7L463.3 213zM453.3 212.7L463.6 181.4L473.8 212.7zM457.5 212.5L477 165.8L496.6 212.5zM479.2 212.2L490.7 184.7L502.2 212.2zM494.9 211.8L508 173.7L521.1 211.8zM507.4 211.4L525.9 160.6L544.5 211.4zM530.8 211L542.2 183.3L553.5 211zM538 210.6L554.5 169.8L571 210.6zM547.9 210.3L567.8 162.4L587.7 210.3zM569.7 210.1L586.1 160.4L602.5 210.1zM590.1 210L602.4 179.5L614.8 210zM600.8 210.1L617.4 170.5L634 210.1zM617.7 210.5L637.9 155.2L658.1 210.5zM637.2 210.9L654.8 163L672.4 210.9zM656.9 211.3L669.7 173.2L682.5 211.3zM662.3 211.7L685.5 156L708.6 211.7zM689.2 212.1L703.7 171.1L718.2 212.1zM703 212.3L716.6 178.2L730.2 212.3zM722.6 212.7L737.3 175.9L752 212.7zM739 213.1L757.1 166.3L775.2 213.1zM762.2 213.5L776.7 176.6L791.1 213.5zM775.4 213.8L791.5 173.3L807.6 213.8zM795.9 214.2L810.4 179.4L824.8 214.2zM814.9 214.7L828.9 171.3L842.8 214.7zM833.4 215.2L846.3 181.6L859.3 215.2zM843.5 215.6L863 165.1L882.4 215.6zM868.9 215.9L882.9 179.5L896.9 215.9zM884.3 216L902.3 165.2L920.4 216zM902.5 215.8L922.7 163.7L943 215.8zM924.2 215.4L944.5 160.7L964.8 215.4zM949.3 214.9L961.8 184L974.3 214.9zM967.5 214.4L983.2 174.1L998.9 214.4zM986.2 214L1002.4 166L1018.5 214zM1005.4 213.6L1022.2 170.1L1039 213.6zM1020.6 213.2L1038.4 168.5L1056.2 213.2zM1041.4 212.9L1056.8 165.3L1072.1 212.9zM1055.2 212.6L1070.4 173.4L1085.5 212.6zM1066.7 212.3L1084.5 165.7L1102.4 212.3zM1083.2 212.1L1097 171.9L1110.7 212.1zM1099 211.8L1109.5 181.8L1120.1 211.8zM1113 211.5L1123.3 179.6L1133.6 211.5zM1125.7 211L1140 173.6L1154.2 211zM1144.3 210.6L1157.9 177.4L1171.5 210.6zM1156.6 210.3L1169.9 172.1L1183.2 210.3zM1174.1 210.1L1186 180.6L1197.9 210.1zM1191.4 210L1201.7 182.9L1212 210zM1199.7 210.1L1214.7 167.7L1229.7 210.1zM1210.5 210.4L1232.5 155.6L1254.5 210.4zM1229.3 210.7L1248.7 160.3L1268 210.7zM1252.9 211.1L1264.4 180.9L1275.9 211.1zM1259.2 211.6L1282 156.9L1304.8 211.6zM1285.1 212L1300.1 175.5L1315 212zM1301.1 212.2L1312.1 183L1323.1 212.2zM1318.7 212.6L1330.2 182.4L1341.8 212.6zM1337.6 213L1351.2 175.7L1364.7 213zM1350.9 213.3L1365.4 178.6L1379.9 213.3zM1358.7 213.6L1381.2 158.8L1403.8 213.6zM1385.1 214L1399.2 180.2L1413.3 214zM1402.6 214.4L1416.1 175.9L1429.7 214.4zM1423.8 214.9L1438 174.2L1452.2 214.9zM1443.4 215.4L1454.8 185.7L1466.1 215.4zM1457.3 215.7L1471.2 180.9L1485 215.7zM1481.6 216L1491.5 189.6L1501.3 216zM1484.7 216L1506.2 161.9L1527.7 216zM1509.2 215.8L1520.7 181.8L1532.1 215.8zM1529.3 215.4L1542.5 180.6L1555.8 215.4zM1542 215L1559.3 169.7L1576.5 215zM1567 214.5L1578.7 185L1590.4 214.5zM1578.9 214.1L1593.7 172.1L1608.6 214.1zM1593.3 213.8L1608.7 171.9L1624.1 213.8zM1606 213.4L1624.3 165.1L1642.6 213.4zM1624.4 213.1L1636.7 179.5L1648.9 213.1zM1638.1 212.6L1657.8 159.9L1677.6 212.6z" fill="#132840" stroke="none"/>
+  <rect class="mist" x="-200" y="186" width="2000" height="44" fill="url(#raid-mist)" stroke="none"/>
+  <!-- hintere Zeltreihe -->
+<path d="M-100 222C-83.3 221.3 -33.3 219 0 218C33.3 217 66.7 216 100 216C133.3 216 166.7 217.3 200 218C233.3 218.7 266.7 220 300 220C333.3 220 366.7 218.7 400 218C433.3 217.3 466.7 216.7 500 216C533.3 215.3 566.7 214.3 600 214C633.3 213.7 666.7 213.7 700 214C733.3 214.3 766.7 215.3 800 216C833.3 216.7 866.7 217.7 900 218C933.3 218.3 966.7 218.3 1000 218C1033.3 217.7 1066.7 216.7 1100 216C1133.3 215.3 1166.7 214 1200 214C1233.3 214 1266.7 215.3 1300 216C1333.3 216.7 1366.7 217.3 1400 218C1433.3 218.7 1466.7 220 1500 220C1533.3 220 1566.7 218.7 1600 218C1633.3 217.3 1666.7 216 1700 216C1733.3 216 1783.3 217.7 1800 218V300H-100Z" fill="#11331f" stroke="none"/>
+<path d="M127 222.8L150 192.8L173 222.8z" fill="#5e2b2b"/>
+<path d="M150 192.8L173 222.8H159.7z" fill="#000" fill-opacity=".14" stroke="none"/>
+<path d="M144 222.8L150 208.3L156 222.8z" fill="#081019"/>
+<path d="M195 224.3L215 198.3L235 224.3z" fill="#6b5a2c"/>
+<path d="M215 198.3L235 224.3H223.4z" fill="#000" fill-opacity=".14" stroke="none"/>
+<path d="M209.8 224.3L215 211.9L220.2 224.3z" fill="#ffb54a"/>
+  <path class="lamp" d="M209.8 224.3L215 211.9L220.2 224.3z" fill="#ffe08a" stroke="none"/>
+<path d="M278 226L300 196L322 226z" fill="#3f4e63"/>
+<path d="M300 196L322 226H309.2z" fill="#000" fill-opacity=".14" stroke="none"/>
+<path d="M294.3 226L300 211.6L305.7 226z" fill="#081019"/>
+<path d="M361 224.5L380 199.5L399 224.5z" fill="#5e2b2b"/>
+<path d="M380 199.5L399 224.5H388z" fill="#000" fill-opacity=".14" stroke="none"/>
+<path d="M375.1 224.5L380 212.5L384.9 224.5z" fill="#081019"/>
+<path d="M1149 220.3L1170 192.3L1191 220.3z" fill="#2d5238"/>
+<path d="M1170 192.3L1191 220.3H1178.8z" fill="#000" fill-opacity=".14" stroke="none"/>
+<path d="M1164.5 220.3L1170 206.9L1175.5 220.3z" fill="#ffb54a"/>
+  <path class="lamp" d="M1164.5 220.3L1170 206.9L1175.5 220.3z" fill="#ffe08a" stroke="none"/>
+<path d="M1417 225L1440 195L1463 225z" fill="#6b5a2c"/>
+<path d="M1440 195L1463 225H1449.7z" fill="#000" fill-opacity=".14" stroke="none"/>
+<path d="M1434 225L1440 210.6L1446 225z" fill="#081019"/>
+<path d="M1500 225.9L1520 199.9L1540 225.9z" fill="#3f4e63"/>
+<path d="M1520 199.9L1540 225.9H1528.4z" fill="#000" fill-opacity=".14" stroke="none"/>
+<path d="M1514.8 225.9L1520 213.4L1525.2 225.9z" fill="#081019"/>
+  <!-- Lagerwiese -->
+<path d="M-100 240C-83.3 239.7 -33.3 238.3 0 238C33.3 237.7 66.7 237.7 100 238C133.3 238.3 166.7 239.3 200 240C233.3 240.7 266.7 241.7 300 242C333.3 242.3 366.7 242.3 400 242C433.3 241.7 466.7 240.3 500 240C533.3 239.7 566.7 239.7 600 240C633.3 240.3 666.7 241.3 700 242C733.3 242.7 766.7 243.7 800 244C833.3 244.3 866.7 244.3 900 244C933.3 243.7 966.7 242.7 1000 242C1033.3 241.3 1066.7 240.3 1100 240C1133.3 239.7 1166.7 239.7 1200 240C1233.3 240.3 1266.7 241.7 1300 242C1333.3 242.3 1366.7 242.3 1400 242C1433.3 241.7 1466.7 240.7 1500 240C1533.3 239.3 1566.7 238.3 1600 238C1633.3 237.7 1666.7 237.7 1700 238C1733.3 238.3 1783.3 239.7 1800 240V300H-100Z" fill="#0f3a24"/>
+  <!-- Grulizelt mit Licht -->
+  <path d="M1170 248.8V214.8L1204 182.8H1298L1332 214.8V248.8z" fill="#c9c1ad"/>
+  <path d="M1170 214.8L1204 182.8H1298L1332 214.8z" fill="#8f2b26"/>
+  <path d="M1204 182.8l-9 32M1235 182.8l-4 32M1267 182.8l4 32M1298 182.8l9 32" stroke="#c9c1ad" stroke-width="5"/>
+  <path d="M1170 214.8L1204 182.8H1298L1332 214.8z" fill="none"/>
+  <path class="lamp" d="M1230 248.8v-24h42v24" fill="#ffc96a"/>
+  <path d="M1230 224.8l-16 16M1272 224.8l16 16" stroke-width="2.5"/>
+  <path d="M1246 248.8v-8a5 5 0 0 1 10 0v8" fill="#0b1622" stroke="none"/><circle cx="1251" cy="234.8" r="4" fill="#0b1622" stroke="none"/>
+  <path d="M1251 182.8v-14" stroke-width="2.5"/><path class="flag" d="M1252 168.8l18 5-18 5z" fill="#ffc23d" stroke-width="2"/>
+  <!-- Zelte im Lager -->
+<path d="M198 251.1L250 177.1L302 251.1z" fill="#9b2f2a"/>
+<path d="M250 177.1L302 251.1H271.8z" fill="#000" fill-opacity=".14" stroke="none"/>
+<path d="M236.5 251.1L250 215.6L263.5 251.1z" fill="#081019"/>
+<path d="M250 177.1l-5.2 -10.4M250 177.1l5.2 -10.4"/>
+<path d="M250 177.1L168.9 251.1M250 177.1L331.1 251.1" stroke-width="1.2" fill="none" stroke-opacity=".6"/>
+<path d="M357 250L400 190L443 250z" fill="#a8842e"/>
+<path d="M400 190L443 250H418.1z" fill="#000" fill-opacity=".14" stroke="none"/>
+<path d="M388.8 250L400 221.2L411.2 250z" fill="#081019"/>
+<path d="M400 190l-4.3 -8.4M400 190l4.3 -8.4"/>
+<path d="M400 190L332.9 250M400 190L467.1 250" stroke-width="1.2" fill="none" stroke-opacity=".6"/>
+<path d="M1370 251.7L1420 179.7L1470 251.7z" fill="#8e9aaa"/>
+<path d="M1420 179.7L1470 251.7H1441z" fill="#000" fill-opacity=".14" stroke="none"/>
+<path d="M1407 251.7L1420 217.2L1433 251.7z" fill="#081019"/>
+<path d="M1420 179.7l-5 -10.1M1420 179.7l5 -10.1"/>
+<path d="M1420 179.7L1342 251.7M1420 179.7L1498 251.7" stroke-width="1.2" fill="none" stroke-opacity=".6"/>
+  <!-- Lichterkette -->
+  <path d="M470 248.5V152.5M1060 246.7V150.7" stroke-width="2.5"/>
+  <path d="M470 156.5Q615 181.9 760 103.3M760 103.3Q910 181 1060 154.7" fill="none" stroke-width="1.6"/>
+  <g class="bulb-glow" fill="url(#raid-bulb)" stroke="none"><circle cx="506.2" cy="167.2" r="11"/><circle cx="542.5" cy="168.7" r="11"/><circle cx="578.8" cy="167" r="11"/><circle cx="615" cy="161.9" r="11"/><circle cx="651.2" cy="153.7" r="11"/><circle cx="687.5" cy="142.1" r="11"/><circle cx="723.8" cy="127.4" r="11"/><circle cx="797.5" cy="127.1" r="11"/><circle cx="835" cy="141.7" r="11"/><circle cx="872.5" cy="153" r="11"/><circle cx="910" cy="161" r="11"/><circle cx="947.5" cy="165.8" r="11"/><circle cx="985" cy="167.3" r="11"/><circle cx="1022.5" cy="165.6" r="11"/></g>
+  <g stroke-width="1.4"><circle class="bulb b-0" cx="506.2" cy="167.2" r="3.6" fill="#ffc23d"/><circle class="bulb b-1" cx="542.5" cy="168.7" r="3.6" fill="#e2332b"/><circle class="bulb b-2" cx="578.8" cy="167" r="3.6" fill="#7fd18a"/><circle class="bulb b-0" cx="615" cy="161.9" r="3.6" fill="#7fb0d8"/><circle class="bulb b-1" cx="651.2" cy="153.7" r="3.6" fill="#fff4b8"/><circle class="bulb b-2" cx="687.5" cy="142.1" r="3.6" fill="#ffc23d"/><circle class="bulb b-0" cx="723.8" cy="127.4" r="3.6" fill="#e2332b"/><circle class="bulb b-1" cx="797.5" cy="127.1" r="3.6" fill="#7fd18a"/><circle class="bulb b-2" cx="835" cy="141.7" r="3.6" fill="#7fb0d8"/><circle class="bulb b-0" cx="872.5" cy="153" r="3.6" fill="#fff4b8"/><circle class="bulb b-1" cx="910" cy="161" r="3.6" fill="#ffc23d"/><circle class="bulb b-2" cx="947.5" cy="165.8" r="3.6" fill="#e2332b"/><circle class="bulb b-0" cx="985" cy="167.3" r="3.6" fill="#7fd18a"/><circle class="bulb b-1" cx="1022.5" cy="165.6" r="3.6" fill="#7fb0d8"/></g>
   <!-- Lagerkreuz -->
-  <path d="M640 176V58M604 84h72"/>
-  <g stroke-width="2.5"><path d="M610 84v22l8-5 8 5V84z" fill="#d8dde3"/><path d="M632 84v22l8-5 8 5V84z" fill="#d8dde3"/><path d="M654 84v22l8-5 8 5V84z" fill="#d8dde3"/></g>
-  <circle cx="618" cy="93" r="3" fill="#e2332b" stroke="none"/><circle cx="640" cy="93" r="3" fill="#1f8a3a" stroke="none"/><circle cx="662" cy="93" r="3" fill="#ffc23d" stroke="none"/>
-  <path class="flag" d="M641 60l34 8-34 10z" fill="#e2332b"/>
-
-  <!-- Lagerfeuer -->
-  <circle cx="820" cy="160" r="90" fill="url(#raid-glow)" stroke="none"/>
-  <path d="M798 182l44-10M842 182l-44-10" stroke="#8a5a2b" stroke-width="6"/>
-  <path class="flame" d="M820 176c-14 0-17-12-12-21 3 5 5 6 7 5-3-10 4-19 9-24 0 9 12 14 12 26 0 9-7 14-16 14z" fill="#ff8a1f"/>
-  <path class="flame flame-2" d="M820 176c-6 0-8-5-5-10 2 2 3 3 4 2-1-5 2-9 4-11 0 4 5 7 5 12 0 4-3 7-8 7z" fill="#ffc23d" stroke-width="2"/>
-
+  <path d="M760 253.3V95.3M720 125.3h80"/>
+  <g stroke-width="2.5"><path d="M726 125.3v24l8-5 8 5v-24z" fill="#d8dde3"/><path d="M752 125.3v24l8-5 8 5v-24z" fill="#d8dde3"/><path d="M778 125.3v24l8-5 8 5v-24z" fill="#d8dde3"/></g>
+  <circle cx="734" cy="135.3" r="3" fill="#e2332b" stroke="none"/><circle cx="760" cy="135.3" r="3" fill="#1f8a3a" stroke="none"/><circle cx="786" cy="135.3" r="3" fill="#ffc23d" stroke="none"/>
+  <path class="flag" d="M761 97.3l36 8-36 10z" fill="#e2332b"/>
+  <path d="M746 253.3l14-12 14 12" fill="none" stroke-width="2.5"/>
+  <!-- Lagerfeuer mit Grulis -->
+  <circle class="glow" cx="990" cy="242.2" r="130" fill="url(#raid-glow)" stroke="none"/>
+  <g fill="#6b4423" stroke-width="2.5"><rect x="902" y="248.2" width="50" height="12" rx="6"/><rect x="1030" y="248.2" width="104" height="12" rx="6"/></g>
+  <use href="#gruli-sit" x="898" y="208.2" width="44" height="64" style="--hair:#c98a3a"/>
+  <g transform="translate(1080 208.2) scale(-1 1)"><use href="#gruli-guitar" width="44" height="64" style="--hair:#2b1d12"/></g>
+  <g transform="translate(1134 210.2) scale(-1 1)"><use href="#gruli-rest" width="40" height="58" style="--hair:#7a4a24"/></g>
+  <g><path d="M964 258.2l52-12M1016 258.2l-52-12" stroke="#8a5a2b" stroke-width="7"/><path class="flame" d="M990 250.2c-16 0-20-14-14-24 3 6 6 7 8 6-4-12 4-22 10-28 0 10 14 16 14 30 0 10-8 16-18 16z" fill="#ff8a1f"/><path class="flame flame-2" d="M990 250.2c-7 0-9-6-6-11 2 2 3 3 4 2-1-6 2-10 5-13 0 5 6 8 6 14 0 5-4 8-9 8z" fill="#ffc23d" stroke-width="2"/><circle class="spark" cx="997" cy="204.2" r="2.5" fill="#ffc23d" stroke="none"/><circle class="spark spark-2" cx="983" cy="210.2" r="2" fill="#ff8a1f" stroke="none"/><circle class="spark spark-3" cx="993" cy="214.2" r="2" fill="#ffc23d" stroke="none"/></g>
+  <g class="note" fill="#fff4b8" stroke="#fff4b8" stroke-width="2"><path d="M1062 194.2v-12l8-2v12" fill="none"/><circle cx="1060" cy="194.2" r="2.5" stroke="none"/></g>
   <!-- Gruli auf Nachtwache mit Taschenlampe (Lichtkegel nach links) -->
-  <polygon class="raid-beam" points="866,146 520,104 520,192" fill="url(#raid-beam)" stroke="none"/>
-  <g transform="translate(900 120) scale(-1 1)">
-    <use href="#gruli" width="44" height="64" class="still"/>
-  </g>
-
+  <polygon class="raid-beam" points="846,216.2 470,162.2 470,260.2" fill="url(#raid-beam)" stroke="none"/>
+  <g transform="translate(880 190.2) scale(-1 1)"><use href="#gruli" width="44" height="64" class="still" style="--hair:#2b1d12"/></g>
   <!-- Überfäller schleichen sich an -->
   <g class="raiders">
-    <text class="raid-alarm" x="96" y="96" fill="#ffc23d" stroke="none" font-family="Baloo 2, sans-serif" font-weight="800" font-size="30">!!</text>
-    <use href="#raider" x="0" y="116" width="44" height="64" style="--step:.42s"/>
-    <use href="#raider" x="52" y="114" width="44" height="64" style="--step:.38s"/>
-    <use href="#raider" x="104" y="117" width="44" height="64" style="--step:.45s"/>
+    <text class="raid-alarm" x="110" y="173.8" fill="#ffc23d" stroke="none" font-family="Baloo 2, sans-serif" font-weight="800" font-size="34">!!</text>
+    <use href="#raider" x="0" y="185.8" width="44" height="64" style="--step:.42s"/>
+    <use href="#raider-sack" x="50" y="183.8" width="44" height="64" style="--step:.38s"/>
+    <use href="#raider" x="104" y="186.8" width="44" height="64" style="--step:.45s"/>
+    <use href="#raider" x="156" y="184.8" width="44" height="64" style="--step:.4s"/>
+  </g>
+  <!-- Vordergrund: große Zelte, Kind lugt heraus, Glühwürmchen -->
+<path d="M1 296L96 172L191 296z" fill="#b3332c"/>
+<path d="M96 172L191 296H135.9z" fill="#000" fill-opacity=".14" stroke="none"/>
+<path d="M71.3 296L96 236.5L120.7 296z" fill="#081019"/>
+<path d="M96 172l-9.5 -17.4M96 172l9.5 -17.4"/>
+<path d="M96 172L-52.2 296M96 172L244.2 296" stroke-width="1.2" fill="none" stroke-opacity=".6"/>
+  <circle cx="96" cy="254" r="8" fill="#f2c8a0" stroke-width="2.2"/><path d="M88 252q1-9 8-9t8 7q-6-2-16 2z" fill="#c98a3a" stroke-width="1.8"/><circle cx="99" cy="255" r="1.4" fill="#0b1622" stroke="none"/>
+  <circle class="lamp" cx="108" cy="262" r="10" fill="url(#raid-bulb)" stroke="none"/><rect x="103" y="259" width="8" height="5" rx="1.2" fill="#ffc23d" stroke-width="1.6"/>
+<path d="M1422 298L1510 186L1598 298z" fill="#b58d2c"/>
+<path d="M1510 186L1598 298H1547z" fill="#000" fill-opacity=".14" stroke="none"/>
+<path d="M1487.1 298L1510 244.2L1532.9 298z" fill="#081019"/>
+<path d="M1510 186l-8.8 -15.7M1510 186l8.8 -15.7"/>
+<path d="M1510 186L1372.7 298M1510 186L1647.3 298" stroke-width="1.2" fill="none" stroke-opacity=".6"/>
+<path d="M-100 286C-83.3 285 -33.3 281.3 0 280C33.3 278.7 66.7 277.7 100 278C133.3 278.3 166.7 280.7 200 282C233.3 283.3 266.7 285 300 286C333.3 287 366.7 287.7 400 288C433.3 288.3 466.7 288.3 500 288C533.3 287.7 566.7 286.3 600 286C633.3 285.7 666.7 285.7 700 286C733.3 286.3 766.7 287.7 800 288C833.3 288.3 866.7 288.3 900 288C933.3 287.7 966.7 286.7 1000 286C1033.3 285.3 1066.7 284.3 1100 284C1133.3 283.7 1166.7 283.7 1200 284C1233.3 284.3 1266.7 286 1300 286C1333.3 286 1366.7 285 1400 284C1433.3 283 1466.7 281 1500 280C1533.3 279 1566.7 277.7 1600 278C1633.3 278.3 1666.7 280.7 1700 282C1733.3 283.3 1783.3 285.3 1800 286V304H-100Z" fill="#08200f"/>
+  <path d="M-2 281.8l2 -11 3 8 2 -14 3 14 3 -10 1 12M29.4 280.8l2 -11 3 8 2 -14 3 14 3 -10 1 12M59.4 280.1l2 -11 3 8 2 -14 3 14 3 -10 1 12M85.6 279.9l2 -11 3 8 2 -14 3 14 3 -10 1 12M123.5 280.7l2 -11 3 8 2 -14 3 14 3 -10 1 12M147.6 281.8l2 -11 3 8 2 -14 3 14 3 -10 1 12M179.6 283.4l2 -11 3 8 2 -14 3 14 3 -10 1 12M218 285l2 -11 3 8 2 -14 3 14 3 -10 1 12M243.3 286.1l2 -11 3 8 2 -14 3 14 3 -10 1 12M276.1 287.4l2 -11 3 8 2 -14 3 14 3 -10 1 12M310 288.5l2 -11 3 8 2 -14 3 14 3 -10 1 12M334.7 289.1l2 -11 3 8 2 -14 3 14 3 -10 1 12M364.7 289.6l2 -11 3 8 2 -14 3 14 3 -10 1 12M400 290.1l2 -11 3 8 2 -14 3 14 3 -10 1 12M431.2 290.2l2 -11 3 8 2 -14 3 14 3 -10 1 12M466.8 290.2l2 -11 3 8 2 -14 3 14 3 -10 1 12M493.3 290l2 -11 3 8 2 -14 3 14 3 -10 1 12M521.1 289.5l2 -11 3 8 2 -14 3 14 3 -10 1 12M546.9 288.9l2 -11 3 8 2 -14 3 14 3 -10 1 12M579 288.2l2 -11 3 8 2 -14 3 14 3 -10 1 12M617.8 287.8l2 -11 3 8 2 -14 3 14 3 -10 1 12M651.2 287.8l2 -11 3 8 2 -14 3 14 3 -10 1 12M687.6 287.9l2 -11 3 8 2 -14 3 14 3 -10 1 12M717.8 288.4l2 -11 3 8 2 -14 3 14 3 -10 1 12M753.7 289.2l2 -11 3 8 2 -14 3 14 3 -10 1 12M779.3 289.8l2 -11 3 8 2 -14 3 14 3 -10 1 12M808 290.1l2 -11 3 8 2 -14 3 14 3 -10 1 12M842.8 290.2l2 -11 3 8 2 -14 3 14 3 -10 1 12M878.4 290.1l2 -11 3 8 2 -14 3 14 3 -10 1 12M909.1 289.8l2 -11 3 8 2 -14 3 14 3 -10 1 12M934.5 289.3l2 -11 3 8 2 -14 3 14 3 -10 1 12M962.8 288.7l2 -11 3 8 2 -14 3 14 3 -10 1 12M990.2 288.1l2 -11 3 8 2 -14 3 14 3 -10 1 12M1018.7 287.5l2 -11 3 8 2 -14 3 14 3 -10 1 12M1055.6 286.6l2 -11 3 8 2 -14 3 14 3 -10 1 12M1082.8 286.1l2 -11 3 8 2 -14 3 14 3 -10 1 12M1121 285.8l2 -11 3 8 2 -14 3 14 3 -10 1 12M1159.1 285.8l2 -11 3 8 2 -14 3 14 3 -10 1 12M1183.9 285.9l2 -11 3 8 2 -14 3 14 3 -10 1 12M1214 286.3l2 -11 3 8 2 -14 3 14 3 -10 1 12M1245.9 287.2l2 -11 3 8 2 -14 3 14 3 -10 1 12M1270.2 287.8l2 -11 3 8 2 -14 3 14 3 -10 1 12M1301 288l2 -11 3 8 2 -14 3 14 3 -10 1 12M1339.5 287.5l2 -11 3 8 2 -14 3 14 3 -10 1 12M1365.3 286.8l2 -11 3 8 2 -14 3 14 3 -10 1 12M1398.9 285.8l2 -11 3 8 2 -14 3 14 3 -10 1 12M1424.8 284.8l2 -11 3 8 2 -14 3 14 3 -10 1 12M1458.1 283.4l2 -11 3 8 2 -14 3 14 3 -10 1 12M1496.4 281.9l2 -11 3 8 2 -14 3 14 3 -10 1 12M1523.7 281.1l2 -11 3 8 2 -14 3 14 3 -10 1 12M1547.8 280.4l2 -11 3 8 2 -14 3 14 3 -10 1 12M1573.1 280l2 -11 3 8 2 -14 3 14 3 -10 1 12" fill="none" stroke="#1d4a2c" stroke-width="2.5"/>
+  <g class="fireflies" fill="#e7ff8a" stroke="none">
+    <circle class="firefly ff-0" cx="330" cy="262" r="2.2"/>
+    <circle class="firefly ff-1" cx="560" cy="268" r="2.2"/>
+    <circle class="firefly ff-2" cx="640" cy="230" r="2.2"/>
+    <circle class="firefly ff-3" cx="1130" cy="262" r="2.2"/>
+    <circle class="firefly ff-0" cx="1300" cy="236" r="2.2"/>
+    <circle class="firefly ff-1" cx="1360" cy="274" r="2.2"/>
+    <circle class="firefly ff-2" cx="190" cy="230" r="2.2"/>
+    <circle class="firefly ff-3" cx="870" cy="278" r="2.2"/>
   </g>
 </svg>
